@@ -94,13 +94,16 @@ begin
     readln(y[i]);
 
   d := det(list, n);
+  if d = 0 then
+  begin
+    writeln('Determinant equals zero');
+    exit;
+  end;
 
+  write('Roots: ');
   for p := 1 to n do
   begin
     sublist := sub(list, y, n, p);
-    write('Roots: ', det(sublist, n) / d);
+    write((det(sublist, n) / d):0:2, ' ');
   end;
-
-  show(list, n);
-
 end.
