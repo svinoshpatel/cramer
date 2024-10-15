@@ -36,6 +36,7 @@ begin
     for k := 1 to n do
     begin
       a := system[1, k];
+      mi := 0;
       for i := 2 to n do
       begin
         mi := mi + 1;
@@ -97,10 +98,9 @@ begin
 end;
 
 var
-  n, i, j, p : Integer;
+  n, i, j : Integer;
   A : Matrix;
   B : Vector;
-  d : Real;
 
 begin
   write('Enter matrix size [1 - 5] -> ');
