@@ -112,7 +112,7 @@ var
   sublist : Matrix;
 begin
   d := det(system, n);
-  if d = 0 then
+  if d < 1e-7 then
   begin
     ShowMessage('Determinant equals zero. No result can be found.');
     exit;
