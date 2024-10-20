@@ -85,7 +85,7 @@ var
   sublist : Matrix;
 begin
   d := det(system, n);
-  if d = 0 then
+  if d < 1e-7 then
   begin
     writeln('Determinant equals zero');
     exit;
